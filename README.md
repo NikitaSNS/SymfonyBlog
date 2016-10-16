@@ -1,0 +1,2 @@
+# SymfonyBlog
+Example blog
