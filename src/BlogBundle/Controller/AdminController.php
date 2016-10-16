@@ -18,4 +18,14 @@ class AdminController extends Controller
     {
         return new Response('admin');
     }
+
+    public function blogAction()
+    {
+        return new Response('stab');
+    }
+
+    public function blogEditAction($id)
+    {
+        return new Response($id);
+    }
 }

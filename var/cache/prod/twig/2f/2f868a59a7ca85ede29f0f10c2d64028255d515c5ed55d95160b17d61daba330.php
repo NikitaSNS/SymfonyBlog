@@ -80,14 +80,17 @@ class __TwigTemplate_bb633f1db2448109ecd5232a9e528298c78bf423c20d9c909ab9efa1a32
             </div>
 
         </div>
+        <div>Lorem ipsum dolor.</div>
+        <div>Alias explicabo, quo.</div>
+        <div>Dolorum, magnam sed!</div>
     </div>
 ";
     }
 
-    // line 49
+    // line 52
     public function block_stylesheets($context, array $blocks = array())
     {
-        // line 50
+        // line 53
         echo "<style>
     body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
     h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
@@ -129,7 +132,7 @@ class __TwigTemplate_bb633f1db2448109ecd5232a9e528298c78bf423c20d9c909ab9efa1a32
 
     public function getDebugInfo()
     {
-        return array (  91 => 50,  88 => 49,  75 => 39,  48 => 15,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  94 => 53,  91 => 52,  75 => 39,  48 => 15,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -179,6 +182,9 @@ class __TwigTemplate_bb633f1db2448109ecd5232a9e528298c78bf423c20d9c909ab9efa1a32
             </div>
 
         </div>
+        <div>Lorem ipsum dolor.</div>
+        <div>Alias explicabo, quo.</div>
+        <div>Dolorum, magnam sed!</div>
     </div>
 {% endblock %}
 

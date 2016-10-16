@@ -128,9 +128,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'BlogBundle\\Controller\\PageController::aboutUsAction',  '_route' => 'blog_about',);
             }
 
-            // admin_page
-            if ($pathinfo === '/admin') {
-                return array (  '_controller' => 'BlogBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin_page',);
+            if (0 === strpos($pathinfo, '/admin')) {
+                // admin_page
+                if ($pathinfo === '/admin') {
+                    return array (  '_controller' => 'BlogBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin_page',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/blog')) {
+                    // admin_blog
+                    if ($pathinfo === '/admin/blog') {
+                        return array (  '_controller' => 'BlogBundle\\Controller\\AdminController::blogAction',  '_route' => 'admin_blog',);
+                    }
+
+                    // admin_blog_edit
+                    if (preg_match('#^/admin/blog/(?P<id>\\d+)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_blog_edit')), array (  '_controller' => 'BlogBundle\\Controller\\AdminController::blogEditAction',));
+                    }
+
+                }
+
             }
 
         }
